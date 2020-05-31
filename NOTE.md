@@ -46,7 +46,17 @@ We'll use m5.xlarge (why) with one node because we'll use a small amount of data
 
 m indicate the multipurpose family vs r that is optimized for RAM or the C family that is optimized for CPU 
 There's a family for each major component
+In general is best to start with the M family and to precise when you understand what we want to optimize
 
+More on instance type here :https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html
+
+5 is for the 5 generation (more performance and cheaper than the older one)
+large indicate the overall hardware quality (small will have less CPU, memory or storage)
+If you want more https://www.ec2instances.info/
+
+Princing for node is somthing as 0.05 per hour https://aws.amazon.com/fr/emr/pricing/
+
+And leastn make sur to select the Key Pair you just created 
 
 
 
