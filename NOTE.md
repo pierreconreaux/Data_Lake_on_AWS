@@ -44,7 +44,7 @@ Configure AWS :```aws configure``` and complete with your access key ID and secr
 
 Configure Sparkify Cluster :
 ```
-aws emr create-cluster --name Sparkify_ClusterII --use-default-roles --release-label emr-5.30.0 --instance-type m5.xlarge  --instance-count 1  --applications Name=Spark Name=Zeppelin --log-uri s3://Sparkify/  --ec2-attributes KeyName=Sparkify_Key
+aws emr create-cluster --name Sparkify_Cluster --use-default-roles --release-label emr-5.30.0 --instance-type m5.xlarge  --instance-count 1  --applications Name=Spark Name=Zeppelin --log-uri s3://Sparkify/  --ec2-attributes KeyName=Sparkify_Key
 ```
 You will see this kind of output:
 
