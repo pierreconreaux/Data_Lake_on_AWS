@@ -1,6 +1,6 @@
 # Create EMR Sparkify cluster
 
-## 1. Create an EMR CLUSTER
+## 1. Create an EMR CLUSTER on AWS
 
 ***Why do you need EMR Cluster?***
 
@@ -35,3 +35,14 @@ From the AWS service menu choose EMR.
 Source to Launch your AWS EMR CLUSTER
 
 https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html
+
+## 2. Create an EMR CLUSTER from terminal
+
+Install AWS on terminal: ```pip install awscli```
+
+Configure AWS :```aws configure``` and complete with your access key ID and secret access key.
+
+Configure Sparkify Cluster :
+```
+aws emr create-cluster --name Sparkify_ClusterII --use-default-roles --release-label emr-5.30.0 --instance-type m5.xlarge  --instance-count 1  --applications Name=Spark Name=Zeppelin --log-uri s3://Sparkify/  --ec2-attributes KeyName=Sparkify_Key
+```
