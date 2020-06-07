@@ -46,7 +46,7 @@ Configure Sparkify Cluster :
 ```
 aws emr create-cluster --name Sparkify_ClusterII --use-default-roles --release-label emr-5.30.0 --instance-type m5.xlarge  --instance-count 1  --applications Name=Spark Name=Zeppelin --log-uri s3://Sparkify/  --ec2-attributes KeyName=Sparkify_Key
 ```
-You will see this type of output:
+You will see this kind of output:
 
 ![alt text](/picture/terminal.png)
 
