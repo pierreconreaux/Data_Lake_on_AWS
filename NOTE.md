@@ -30,11 +30,7 @@ From the AWS service menu choose EMR.
 - Select last EMR version and select Spark option. Here we'll use emr-5/30.0 with Spark 2.4.5. Note that it'll use YARN cluser mode (```more```). 
 - Choose a m5.xlarge. M for mulipurpose (the other one optimized a specific step, i.e c is optimized for CPU, more https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html). 5 to use the latest version whose are cheaper and more efficient that the older one. Large indicate the hardware quality, opposed to small which have less CPU, memory and storage. 
 - To test we can use 1 node and increase it after. Note that the pricing for node is about 0.05 per hour https://aws.amazon.com/fr/emr/pricing/
-- Make sure to select the Key Pair we've just created.
-
-More on EC2 https://www.ec2instances.info/
-
-
+- ***Make sure to select the Key Pair we've just created.***
 
 Source to Launch your AWS EMR CLUSTER
 
