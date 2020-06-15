@@ -1,10 +1,16 @@
-# Create EMR Sparkify cluster
+# Create EMR Sparkify cluster on AWS
 
-## 1. Create an EMR CLUSTER on AWS
+This is a step by step process to create an EMR cluster on AWS.
 
 ***Why do you need EMR Cluster?***
 
 Spark cluster includes multiple machines to use Spark code on each one, we need to download and install Spark as well as its dependencies on all machines. Elastic Map Reduce (EMR) allow us to use Spark on every single machine without the necessity to install Spark on each one.
+
+***Step to create an EMR Cluster?***
+
+* Create an Amazon S3 Bucket
+* Create an Amazon EC2 Key Pair
+* Launch a Cluster
 
 ***Create an Amazon EC2 Key Pair***
 
@@ -32,29 +38,8 @@ From the AWS service menu choose EMR.
 - To test we can use 1 node and increase it after. Note that the pricing for node is about 0.05 per hour https://aws.amazon.com/fr/emr/pricing/
 - ***Make sure to select the Key Pair we've just created.***
 
-Source to Launch your AWS EMR CLUSTER
+Source :
 
-https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-gs.html
+Guide by AWS
 
-## 2. Create an EMR CLUSTER from terminal
-
-Install AWS on terminal: ```pip install awscli```
-
-Configure AWS :```aws configure``` and complete with your access key ID and secret access key.
-
-Configure Sparkify Cluster :
-```
-aws emr create-cluster --name Sparkify_Cluster --use-default-roles --release-label emr-5.30.0 --instance-type m5.xlarge  --instance-count 1  --applications Name=Spark Name=Zeppelin --log-uri s3://Sparkify/  --ec2-attributes KeyName=Sparkify_Key
-```
-You will see this kind of output:
-
-![alt text](/picture/terminal.png)
-
-
-You can check if the cluster is showing up in AWS browser or you can type:
-```
-aws emr describe-cluster --clusterid <paste_your_id>
-```
-
-More : https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html
-
+https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview.html
