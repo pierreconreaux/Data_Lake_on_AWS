@@ -110,19 +110,22 @@ Using the song and event datasets, we'll need to create a star schema optimized 
 
 The initial project template includes five files:
 
-* ***etl.py*** is where we'll load data from S3 into staging tables on Redshift and then process 
-that data into your analytics tables on Redshift.
+* ***etl.py*** is where we'll load data from S3 into staging tables on EMR and then process 
+that data into your analytics tables on EMR.
 * ***dl.cfg*** is where we'll provide necessary information for AWS (information will be use in other files). 
-*** I've suppress this file, because we'll launch our etl directly from our EMRcluster.***
+***I've suppress this file, because we'll launch our ETL directly from our EMRcluster.***
 
 I've add one file:
 
 * ***EMR_cluster.md*** 
 a step by step approach to create your EMR cluster on AWS
-is where we'll create our cluser and role on aws. If you want you can create it directly on AWS (https://docs.aws.amazon.com/eks/latest/userguide/service_IAM_role.html)
+is where we'll create our cluser and role on aws. 
 
 ## Project Steps
 
+* Create an EMR Cluster
+* Complete ETL code
+* Launch ETL from AWS
 
 ## Sources:
 
